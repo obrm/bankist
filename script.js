@@ -86,8 +86,6 @@ const createUsernames = accs => {
 
 createUsernames(accounts);
 
-console.log(accounts);
-
 // Show number with commas
 const numberWithCommas = number =>
   number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
