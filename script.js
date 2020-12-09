@@ -9,7 +9,7 @@ const account0 = {
   owner: 'Ori Baram',
   movements: [1000, 250, -100, 15000, -60, 350, 600, -200],
   interestRate: 1.4, // %
-  pin: 5555,
+  pin: 1234,
 };
 
 const account1 = {
