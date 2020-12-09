@@ -5,6 +5,13 @@
 // BANKIST APP
 
 // Data
+const account0 = {
+  owner: 'Ori Baram',
+  movements: [1000, 250, -100, 15000, -60, 350, 600, -200],
+  interestRate: 1.4, // %
+  pin: 5555,
+};
+
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -33,7 +40,7 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+const accounts = [account0, account1, account2, account3, account4];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -76,7 +83,10 @@ const createUsernames = accs => {
       .join('');
   });
 };
+
 createUsernames(accounts);
+
+console.log(accounts);
 
 // Show number with commas
 const numberWithCommas = number =>
@@ -170,7 +180,6 @@ btnLogin.addEventListener('click', e => {
 btnLoan.addEventListener('click', e => {
   e.preventDefault();
   const loanAmount = Number(inputLoanAmount.value);
-  console.log(loanAmount * 0.1);
   if (
     loanAmount > 0 &&
     currentAccount.movements.some(movement => movement >= loanAmount * 0.1)
